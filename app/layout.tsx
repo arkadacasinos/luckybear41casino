@@ -8,6 +8,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className="bg-[#0b101b]">
       <head>
+        <meta name="yandex-verification" content="983d2fa3291e3c2d" />
         <meta charSet="utf-8" />
         <title>Lucky Bear Casino Официальный Сайт | Вход и Рабочее Зеркало Лаки Бир Казино Онлайн</title>
         <meta name="description" content="Официальный сайт Lucky Bear Casino: актуальное рабочее зеркало Лаки Бир Казино, быстрый вход, моментальные выплаты и бонус до 360% на депозит. Играйте в топовые слоты Luckybear Casino онлайн 24/7!" />
