@@ -1,0 +1,195 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #0b101b;
+    color: #f1f5f9;
+  }
+  body {
+    background-color: #0b101b;
+    color: #f1f5f9;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* Mangled class prefix: lb41- */
+  .lb41-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #0b101b;
+    position: relative;
+  }
+
+  .lb41-sidebar {
+    width: 210px;
+    background-color: #0e1424;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 40;
+  }
+
+  .lb41-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #0b101b;
+    padding-bottom: 70px;
+  }
+
+  .lb41-header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #0e1424;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 30;
+  }
+
+  .lb41-btn-primary {
+    background: linear-gradient(135deg, #1d82f6 0%, #1765c1 100%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 9px 18px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(29, 130, 246, 0.35);
+    white-space: nowrap;
+  }
+
+  .lb41-btn-primary:hover {
+    background: linear-gradient(135deg, #2b8cff 0%, #1e72d8 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(29, 130, 246, 0.45);
+  }
+
+  .lb41-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #8fa0be;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+
+  .lb41-nav-item:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+
+  .lb41-nav-active {
+    color: #2b82f6 !important;
+    background-color: rgba(43, 130, 246, 0.12) !important;
+    border: 1px solid rgba(43, 130, 246, 0.35);
+    font-weight: 600;
+  }
+
+  .lb41-tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 7px 0;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .lb41-tab-active {
+    background-color: #1d82f6;
+    color: #ffffff;
+  }
+
+  .lb41-tab-inactive {
+    background-color: #151d30;
+    color: #7284a1;
+  }
+
+  .lb41-pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #141b2e;
+    color: #8fa0be;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+
+  .lb41-pill-btn:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.12);
+    background-color: #1a233b;
+  }
+
+  .lb41-pill-active {
+    background-color: #1d82f6 !important;
+    color: #ffffff !important;
+    border-color: #1d82f6 !important;
+  }
+
+  .lb41-card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .lb41-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .lb41-text-gradient-blue {
+    background: linear-gradient(180deg, #64b5f6 0%, #2196f3 50%, #1565c0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 18px rgba(33, 150, 243, 0.4);
+  }
+
+  /* Drawer for mobile */
+  #lb-drawer:not(:target) {
+    display: none !important;
+  }
+
+  #lb-drawer:target {
+    display: flex !important;
+  }
+
+  @media (max-width: 1023px) {
+    .lb41-sidebar {
+      display: none;
+    }
+    .lb41-main {
+      padding-bottom: 80px;
+    }
+  }
+}
